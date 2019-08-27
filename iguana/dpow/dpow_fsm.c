@@ -131,13 +131,13 @@ int32_t dpow_checkutxo(struct supernet_info *myinfo,struct dpow_info *dp,struct 
     }
     else if ( strcmp("KMD",coin->symbol) == 0 )
     {
-        minutxo = 512;
-        n = 256;
+        minutxo = 100;
+        n = 50;
     }
     else
     {
-        minutxo = 49;
-        n = 50;
+        minutxo = 29;
+        n = 20;
     }
     if ( (haveutxo= dpow_haveutxo(myinfo,coin,txidp,voutp,coinaddr,srccoin)) <= minutxo && time(NULL) > dp->lastsplit+bp->duration && (bp->myind != 0 || dp->ratifying == 0) )
     {
